@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+  background-color: var(--background-color); /* Dynamic background color */
+  color: var(--text-color); /* Dynamic text color */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+  font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s;
+}
+
+.status, .status-message {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--status-color); /* Dynamic color for status message */
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: var(--square-bg); /* Dynamic square background */
+  border: 2px solid var(--border-color); /* Dynamic border color */
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--square-text-color); /* Dynamic square text color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  border-radius: 10px; /* Softer edges for squares */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.square:hover {
+  background-color: var(--square-hover-bg); /* Dynamic hover background */
+  transform: scale(1.05); /* Grow slightly on hover */
+}
+
+.square:active {
+  transform: scale(0.95); /* Shrink on click */
+}
+
+.reset-button, .toggle-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--button-bg); /* Dynamic button background */
+  color: var(--button-text-color); /* Dynamic button text color */
+  border: none;
+  border-radius: 8px; /* Smooth rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.reset-button:hover, .toggle-button:hover {
+  background-color: var(--button-hover-bg); /* Hover color for buttons */
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.reset-button:focus, .toggle-button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.toggle-button {
+  margin-left: 10px;
+}
+
+.reset-button:active, .toggle-button:active {
+  transform: scale(0.95); /* Shrink slightly on click */
+}
+
+/* Difficulty Select */
+.difficulty-select {
+  margin-top: 20px;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.difficulty-select select {
+  background-color: var(--dropdown-bg); /* Dynamic dropdown background */
+  color: var(--text-color); /* Dynamic dropdown text color */
+  padding: 5px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Theme Variables - Light */
+:root {
+  --background-color: #f5f5f5;
+  --text-color: #121212;
+  --status-color: #333;
+  --square-bg: #ffffff;
+  --square-text-color: #121212;
+  --border-color: #cccccc;
+  --square-hover-bg: #dddddd;
+  --button-bg: #6200ea;
+  --button-text-color: #ffffff;
+  --button-hover-bg: #3700b3;
+  --dropdown-bg: #f0f0f0;
+}
+
+/* Theme Variables - Dark */
+body.dark-theme {
+  --background-color: #121212;
+  --text-color: #f0f0f0;
+  --status-color: #f0f0f0;
+  --square-bg: #1e1e1e;
+  --square-text-color: #ffffff;
+  --border-color: #3a3a3a;
+  --square-hover-bg: #3a3a3a;
+  --button-bg: #bb86fc;
+  --button-text-color: #121212;
+  --button-hover-bg: #3700b3;
+  --dropdown-bg: #2c2c2c;
+}
+
+/* Animations */
+@keyframes status-message-fade {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.status-message {
+  animation: status-message-fade 0.5s ease-in-out;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+  .square {
+      width: 80px;
+      height: 80px;
+      font-size: 24px;
+  }
+
+  .status, .status-message {
+      font-size: 20px;
+  }
+
+  .reset-button, .toggle-button {
+      font-size: 14px;
+  }
+}
+
+/* Winning Animation */
+@keyframes winning-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.winning-square {
+  animation: winning-animation 0.5s ease-in-out forwards;
+  background-color: var(--square-hover-bg); /* Optional: Change color to highlight */
+  border: 4px solid #ffcc00; /* Optional: Highlight border color */
+}
