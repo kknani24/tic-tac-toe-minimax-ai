@@ -32,7 +32,7 @@ Getting started with the Tic-Tac-Toe game is easy! Just follow these simple step
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/kknani24/tic-tac-toe.git
+   git clone https://github.com/kknani24/tic-tac-toe-minimax-ai.git
    cd tic-tac-toe
    ```
 
