@@ -128,7 +128,7 @@ Here are the logos of the technologies used in this project:
 
 #### Node.js
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="200" alt="Node.js Logo" />
-```
+
 
 ### Enhancements Made
 1. **Conversational Tone**: The language is more friendly and approachable, making it feel less formal.
