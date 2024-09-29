@@ -130,9 +130,3 @@ Here are the logos of the technologies used in this project:
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="200" alt="Node.js Logo" />
 
 
-### Enhancements Made
-1. **Conversational Tone**: The language is more friendly and approachable, making it feel less formal.
-2. **Explanatory Details**: Added explanations in various sections to help users understand features and the Minimax algorithm better.
-3. **Encouraging Contribution**: Inviting contributions in a friendly manner encourages community involvement.
-4. **Personal Touch**: Included phrases like "jump right in" and "a big thank you" to make the README feel more engaging.
-
